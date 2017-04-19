@@ -42,31 +42,26 @@ $flag = true;
 ?>
 //4. Найти все четные четырехзначные числа, цифры которых следуют в порядке возрастания или убывания.
 <?php
-    function Up($n){
+	function Up($n){
 		$flag = true;
 		while($n >=10){
 			$k = (int)($n % 10);
-            $l = (int)(($n / 10) % 10);
-			if($k <= $l){
-				return false;
-			}
-            $n =(int)($n / 10);
+			$l = (int)(($n / 10) % 10);
+			if($k <= $l) return false;
+			$n =(int)($n / 10);
 		}
-	return $flag;
+		return $flag;
 	}
 	function Down($n){
 		$flag = true;
 		while($n >=10){
 			$k = (int)($n % 10);
-            $l = (int)(($n / 10) % 10);
-			if($k >= $l){
-				return false;
-			}
-            $n =(int)($n / 10);
+            		$l = (int)(($n / 10) % 10);
+			if($k >= $l) return false;
+            		$n =(int)($n / 10);
 		}
-	return $flag;
+		return $flag;
 	}
-	
 	for($i = 1000; $i < 10000; $i += 2){
 		if(Up($i) || Down($i)) echo $i."\n";
 	}
@@ -105,3 +100,4 @@ for($i = 1000; $i < 10000; $i++){
    if($flag)echo ($i."\n");
 }
 ?>
+//7. Выяснить, есть ли в записи натурального числа N две одинаковые цифры.
