@@ -179,9 +179,9 @@ function automorphic($num)
 <?php
 $n = 1000;
 for ($i = 0; $i < $n; $i++)
-    if (isPalindrome($i * $i) == $i * $i)
+    if (palindrome($i * $i) == $i * $i)
         echo "$i \t";
-function isPalindrome($n)
+function palindrome($n)
 {
     $m = 0;
     while($n != 0)     
